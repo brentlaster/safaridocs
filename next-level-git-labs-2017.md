@@ -473,11 +473,11 @@ Purpose:  In this lab, we’ll see how to work with the filter branch functional
 
         $ git log --format="%h %ae"
 
-10.  To do this, as part of the command, set the desired email address to your email address, and then we’ll export it for the filtering.  Here’s the command to run:
+10. To do this, as part of the command, set the desired email address to your email address, and then we’ll export it for the filtering.  Here’s the command to run:
 
         $ git filter-branch -f --env-filter 'GIT_AUTHOR_EMAIL=<your email address>; export GIT_AUTHOR_EMAIL'
 
-11.  After this change, you can run the same command as above to see the updates:
+11. After this change, you can run the same command as above to see the updates:
 
         $ git log --format="%h %ae"
 
@@ -671,7 +671,7 @@ if [[ -n "$web_dir" ]] && [[ $new_head_ref =~ ^web.*$ ]]; then
 
         $ git checkout -b  webtest
 
-12.  Make a change to a file and stage and commit it into your repository.
+12. Make a change to a file and stage and commit it into your repository.
 
         $ echo  more  >>  (some-file-name)
         $ git commit -am “update”
