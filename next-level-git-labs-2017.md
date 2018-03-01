@@ -628,12 +628,12 @@ NOTE: Up through step 7, the parts in bold represent code that you are typing in
 
 5. We unset this environment variable since it is not needed and will cause problems if set for our “checkout” to a non-Git area.
 
-unset GIT_INDEX_FILE
+        unset GIT_INDEX_FILE
 
 
 6.  Now we will create the conditional execution block to mirror the code if the conditions are met.   The first part is the if statement that checks for the configuration value being set and another condition that checks that the branch starts with “web”.
 
-if [[ -n "$web_dir" ]] && [[ $new_head_ref =~ ^web.*$ ]]; then
+        if [[ -n "$web_dir" ]] && [[ $new_head_ref =~ ^web.*$ ]]; then
 
 7. For the body of the conditional, we will add a line that calls “git” and checks out the current code into the configured location.  Notice that this statement uses the git-dir setting to redirect the checkout to the desired mirror directory.  We will also add the closing “fi” to finish our if block.
 
